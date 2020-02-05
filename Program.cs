@@ -13,18 +13,33 @@ namespace practice_online
             Console.WriteLine("ENTER two NUMBERS");
             int A1 = int.Parse(Console.ReadLine());
             int B1 = int.Parse(Console.ReadLine());
+            FunctionJunction(A1, B1);
+            
+        }
+        public static void FunctionJunction( int A1, int B1)
+        {
             Console.WriteLine("choose your function, enter 1 for ADDITION, 2 for SUBTRACTION, 3 for MULTIPLY, and 4 for DIVIDE");
             double Function = double.Parse(Console.ReadLine());
-            if Function = 1.0
-
-        }
-        public static void FUNction(string Function, double A1, double B1)
-        {
-            if (double.Parse(Function) = 1)
+            if (Function == 1)
             {
-                 ADDITION(A1,B1);
+                ADDITION(A1, B1);
             }
+            else if (Function == 2)
+            {
+                SUBTRACTION(A1, B1);
+            }
+            else if (Function == 3)
+            {
+                MULTIPLY(A1, B1);
+            }
+            else if (Function == 4)
+            {
+                DIVIDE(A1, B1);
+            }
+            else
+                FunctionJunction(A1,B1); 
         }
+
         public static void ADDITION(double A1, double B1)
         {
             double addResult = (A1 + B1);
